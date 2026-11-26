@@ -4,7 +4,7 @@ import shutil
 from html import escape
 from pathlib import Path
 
-STATUS_LABEL = {"violation": "🚩 Violação", "review": "🔎 Revisar", "ok": "✅ OK"}
+STATUS_LABEL = {"violation": "Violação", "review": "Revisar", "ok": "✅ OK"}
 
 # O visual fica em report.css (edite lá, sem mexer no Python)
 CSS_SOURCE = Path(__file__).parent / "report.css"
