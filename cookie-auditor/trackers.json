@@ -1,0 +1,45 @@
+{
+  "_comment": "Base de assinaturas de exemplo. Cresça ela com Open Cookie Database e Disconnect.me.",
+  "cookie_rules": [
+    {"pattern": "_ga(_[A-Z0-9]+)?", "category": "analytics", "vendor": "Google Analytics"},
+    {"pattern": "_gid|_gat(_.*)?", "category": "analytics", "vendor": "Google Analytics"},
+    {"pattern": "__utm[a-z]", "category": "analytics", "vendor": "Google Analytics (legado)"},
+    {"pattern": "_gcl_(au|aw|dc|gb)", "category": "advertising", "vendor": "Google Ads"},
+    {"pattern": "IDE|DSID|test_cookie", "category": "advertising", "vendor": "Google DoubleClick"},
+    {"pattern": "_fbp|_fbc|fr", "category": "advertising", "vendor": "Meta (Facebook)"},
+    {"pattern": "_hjSessionUser_.*|_hjSession_.*|_hjid|_hjFirstSeen", "category": "analytics", "vendor": "Hotjar"},
+    {"pattern": "_clck|_clsk|CLID", "category": "analytics", "vendor": "Microsoft Clarity"},
+    {"pattern": "_uetsid|_uetvid|MUID", "category": "advertising", "vendor": "Microsoft Advertising"},
+    {"pattern": "_ttp|_tt_enable_cookie", "category": "advertising", "vendor": "TikTok"},
+    {"pattern": "_pin_unauth|_pinterest_.*", "category": "advertising", "vendor": "Pinterest"},
+    {"pattern": "_scid|_sctr", "category": "advertising", "vendor": "Snapchat"},
+    {"pattern": "bcookie|lidc|UserMatchHistory|AnalyticsSyncHistory", "category": "advertising", "vendor": "LinkedIn"},
+    {"pattern": "ajs_anonymous_id|ajs_user_id", "category": "analytics", "vendor": "Segment"},
+    {"pattern": "_pk_id.*|_pk_ses.*", "category": "analytics", "vendor": "Matomo"},
+    {"pattern": "amplitude_id.*", "category": "analytics", "vendor": "Amplitude"},
+    {"pattern": "mp_.*_mixpanel", "category": "analytics", "vendor": "Mixpanel"},
+
+    {"pattern": "PHPSESSID|JSESSIONID|ASP\\.NET_SessionId|connect\\.sid|sessionid|session_id|sid", "category": "essential", "vendor": "Sessão"},
+    {"pattern": "csrftoken|XSRF-TOKEN|_csrf|csrf_token", "category": "essential", "vendor": "Proteção CSRF"},
+    {"pattern": "__cf_bm|__cfruid|cf_clearance", "category": "essential", "vendor": "Cloudflare (segurança)"},
+    {"pattern": "CookieConsent|OptanonConsent|OptanonAlertBoxClosed|cookieconsent_status|euconsent-v2|cookie_consent", "category": "essential", "vendor": "Gestão de consentimento"}
+  ],
+  "domain_rules": [
+    {"domain": "doubleclick.net", "category": "advertising", "vendor": "Google DoubleClick"},
+    {"domain": "googlesyndication.com", "category": "advertising", "vendor": "Google AdSense"},
+    {"domain": "google-analytics.com", "category": "analytics", "vendor": "Google Analytics"},
+    {"domain": "facebook.com", "category": "social", "vendor": "Meta (Facebook)"},
+    {"domain": "facebook.net", "category": "advertising", "vendor": "Meta (Facebook)"},
+    {"domain": "criteo.com", "category": "advertising", "vendor": "Criteo"},
+    {"domain": "criteo.net", "category": "advertising", "vendor": "Criteo"},
+    {"domain": "taboola.com", "category": "advertising", "vendor": "Taboola"},
+    {"domain": "outbrain.com", "category": "advertising", "vendor": "Outbrain"},
+    {"domain": "adnxs.com", "category": "advertising", "vendor": "Xandr"},
+    {"domain": "hotjar.com", "category": "analytics", "vendor": "Hotjar"},
+    {"domain": "clarity.ms", "category": "analytics", "vendor": "Microsoft Clarity"},
+    {"domain": "tiktok.com", "category": "advertising", "vendor": "TikTok"},
+    {"domain": "linkedin.com", "category": "advertising", "vendor": "LinkedIn"},
+    {"domain": "twitter.com", "category": "social", "vendor": "X (Twitter)"},
+    {"domain": "youtube.com", "category": "advertising", "vendor": "Google / YouTube"}
+  ]
+}

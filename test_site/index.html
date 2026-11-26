@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Site de teste do auditor</title>
+</head>
+<body>
+  <h1>Site de teste</h1>
+  <p>Abra com <code>?clean=1</code> para o teste de controle (só cookie essencial).</p>
+
+  <div id="banner" style="position:fixed;bottom:0;left:0;right:0;background:#222;color:#fff;padding:1rem">
+    Usamos cookies. <button onclick="document.getElementById('banner').remove()">Aceitar</button>
+  </div>
+
+  <script>
+    // Cookie essencial (deve sair como OK)
+    document.cookie = "session_id=abc123; path=/";
+
+    // Cookies "culpados": gravados ANTES de qualquer clique no banner
+    if (!location.search.includes("clean")) {
+      const year = 60 * 60 * 24 * 365;
+      document.cookie = `_ga=GA1.1.123456789.1700000000; max-age=${year * 2}; path=/`;
+      document.cookie = `_gid=GA1.1.987654321.1700000000; max-age=86400; path=/`;
+      document.cookie = `_fbp=fb.1.1700000000000.123456789; max-age=${year / 4}; path=/`;
+      document.cookie = `_gcl_au=1.1.111111111.1700000000; max-age=${year / 4}; path=/`;
+      document.cookie = `meu_cookie_misterioso=xyz; path=/`; // desconhecido -> "revisar"
+    }
+  </script>
+</body>
+</html>
